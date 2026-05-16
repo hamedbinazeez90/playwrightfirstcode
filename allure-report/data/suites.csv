@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","20019","@ui child window handler","","2026-05-14","broken","2026-05-14","","endtoendotherway.spec.js","",""
+"","3889","End to End product order","","2026-05-14","passed","2026-05-14","","abortnetworkcall.spec.js","",""
+"","6797","End to End product order","","2026-05-14","failed","2026-05-14","","endtoend.spec.js","",""
+"","6679","Client App Login","","2026-05-14","failed","2026-05-14","","ClientAPPPO.spec.js","",""
