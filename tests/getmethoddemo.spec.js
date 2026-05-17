@@ -9,7 +9,7 @@ test('@ API get product list from API', async () => {
   const response = await apiContext.get('https://jsonplaceholder.typicode.com/posts/1');
 
   // Verify status code
-  console.log(expect(response.status()).toBe(200));
+  console.log(expect(response.status()).toEqual(200));
 
   // Parse JSON response
   const jsonresponse = await response.json();

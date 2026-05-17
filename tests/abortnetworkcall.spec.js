@@ -7,7 +7,7 @@ test.only('End to End product order',async ({browser})=>
  
 const context =await browser.newContext();
 const page =await context.newPage();
-page.route('**/*.{jpg,png,jpeg}',route=>route.abort())//abort network calls
+page.route('**/*.{jpg,png,jpeg}',route=>route.abort())
  
 // await page.goto("https://rahulshettyacademy.com/client/#/auth/register/");await page.locator(".text-reset").click();
 await page.goto("https://rahulshettyacademy.com/client/");
@@ -27,6 +27,5 @@ const prouductName = "ZARA COAT 3";
 const count =await products.count();
 console.log(count);
 console.log(await products.allTextContents());
- 
 }
 )
