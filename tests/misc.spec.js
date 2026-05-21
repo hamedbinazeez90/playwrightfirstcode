@@ -10,7 +10,6 @@ test('misc ',async ({page})=>{
 await page.locator('//div//input[@type="checkbox"]').nth(11).check()
 await expect(page.locator('//div//input[@type="checkbox"]').nth(11)).toBeChecked();
   // await expect(householdCheckbox).toBeChecked();
-
-    await page.waitForTimeout(3000)
+    await page.waitForTimeout(2000)
 
 })

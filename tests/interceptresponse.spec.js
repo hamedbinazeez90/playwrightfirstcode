@@ -28,8 +28,7 @@ await page.route("https://rahulshettyacademy.com/api/ecom/order/get-orders-for-c
       route.fulfill(
         {
           response,
-          body, 
- 
+          body,  
         });
       //intercepting response -APi response-> { playwright fakeresponse}->browser->render data on front end
     });

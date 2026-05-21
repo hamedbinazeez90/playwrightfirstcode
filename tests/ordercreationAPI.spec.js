@@ -4,8 +4,7 @@ const LoginPayLoad = {userEmail:"hamed@gmail.com",userPassword:"Learning@123"};
 const orderPayLoad= {orders:[{country:"Cuba",productOrderedId:"6960eac0c941646b7a8b3e68"}]};
 let token;
 let orderId;
-test.beforeAll( async()=>{
- 
+test.beforeAll( async()=>{ 
 const apicontext = await request.newContext();
 const loginResponse =await apicontext.post("https://rahulshettyacademy.com/api/ecom/auth/login",
     {
@@ -41,7 +40,7 @@ test('@API Client API Login ',async ({browser})=>//anonymous function
 {   
   const context = await browser.newContext();
     const page= await context.newPage();
-    page.addInitScript(value =>{window.localStorage.setItem('token', value)},token );
+page.addInitScript(value =>{window.localStorage.setItem('token', value)},token );
  // addinitscript()-->inject JavaScript code before the page's own scripts start running.
  //window.localStorage.setItem--> store a key–value pair inside the browser’s local storage.
     console.log("token received here is :  " +token);

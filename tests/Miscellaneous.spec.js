@@ -17,7 +17,7 @@ test("@Web MoreValidations", async ({ page }) => {
     //await page.pause();
     await page.locator("#confirmbtn").click();
     page.on('dialog', dialog => dialog.accept());
-    //page.pause();
+    //page.pause(); 
     page.locator("#mousehover").hover();
 
 
@@ -25,6 +25,21 @@ test("@Web MoreValidations", async ({ page }) => {
     await framelocator.getByRole("link", { name: "All Access plan" }).click();
     const textcheck = await framelocator.locator(".text h2").textContent();
     console.log(textcheck.split(" ")[1]);
+
+});
+
+
+test('other locators', async ({ page }) => {
+
+    await page.goto("https://www.rahulshettyacademy.com/loginpagePractise/");  
+    const dropdown = page.locator("select.form-control");
+    await dropdown.selectOption("consult");
+    await expect(dropdown).toHaveValue("consult");
+    page.locator(".radiotextsty").nth(1).check();//radio button checked
+    await expect(page.locator(".radiotextsty").nth(1)).toBeChecked();
+    await page.locator("#terms").check();
+    await expect(page.locator("#terms")).toBeChecked();
+    
 
 });
 

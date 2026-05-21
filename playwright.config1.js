@@ -31,7 +31,7 @@ projects : [
                 use: {
                   browserName : 'chromium',
                   headless : true,
-                  screenshot:'on',
+                  screenshot:'only-on-failure',
                   video: 'retain-on-failure',
                   trace:'on',
                   //viewport:{width:720,height:720},
