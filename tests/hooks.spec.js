@@ -6,7 +6,7 @@ test.beforeAll(async () => {
   console.log('This will run before all tests');
 });
 
-test.beforeEach(async ({ page }) => {
+test.beforeEach('before each test', async ({ page }) => {
   await page.goto(GOOGLE_URL);
 });
 
@@ -18,7 +18,7 @@ test('locator visibility test - Sign in link', async ({ page }) => {
   await expect(page.getByText('Sign in')).toBeVisible();
 });
 
-test.afterEach(async ({ page }) => {
+test.afterEach('after each test', async ({ page }) => {
   await page.close();
 });
 

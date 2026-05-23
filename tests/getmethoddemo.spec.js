@@ -13,5 +13,6 @@ test('@ API get product list from API', async () => {
 
   // Parse JSON response
   const jsonresponse = await response.json();
+  console.log(jsonresponse.token)
     console.log(jsonresponse)
 });
