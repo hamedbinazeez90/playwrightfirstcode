@@ -44,8 +44,7 @@ await confirmorder.ViewOrderconfirmation(expect,data.username);
  
 }
 );
-}
- 
+} 
  
 customtest_hamed.only(`Client App Login`,async ({page,testdatafororders})=>//anonymous function
                                             //page is the global/playwright fixture
@@ -70,9 +69,8 @@ const addToCart = new AddToCart(page);
 await addToCart.PlaceOrder(expect,testdatafororders.prouductName);
  
 const confirmorder = new ConfirmOrder(page);
-await confirmorder.ViewOrderconfirmation(expect,testdatafororders.username);
- 
- 
+await confirmorder.ViewOrderconfirmation(expect,testdatafororders.username); 
+
 }
 )
 

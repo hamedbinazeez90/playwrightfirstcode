@@ -24,17 +24,18 @@ this.selectcountryoption = page.locator(".ta-results button");
 }
 
 
-
-async AddCartAndSelectCountry(expect:any)
+async PlaceOrder(expect:any,prouductName:string)
 {
 
     await this.allitems.first().isVisible();
-    const bool=await this.product.isVisible();
+      const bool = await this.page.locator("h3:has-text('"+prouductName+"')").isVisible();
     console.log(bool);
-    console.log(await this.product.textContent());
+    console.log(await this.page.locator("h3:has-text('"+prouductName+"')").textContent());
     expect(bool).toBeTruthy();
     await this.checkout .click();
-    await this.country.pressSequentially("ind",{delay:150});//type slowly by keeping 150
+     //bool=await this.product.isVisible();
+   
+    await this.country.pressSequentially("ind",{delay:250});//type slowly by keeping 150
     const dropdown=this.dropdown;
     await dropdown.waitFor();
     const optionsCount = await dropdown.locator("button").count();

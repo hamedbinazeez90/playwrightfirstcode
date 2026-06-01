@@ -2,10 +2,10 @@
 import {expect,test} from '@playwright/test';
 import {customTest} from '../Utils_ts/test-base';
 
-import { LoginPage } from "../PageObjects/LoginPage";
-import { DashboardPage } from "../PageObjects/DashBoardPage";
-import { AddToCart } from "../PageObjects/AddToCart";
-import { ConfirmOrder } from "../PageObjects/ConfirmOrder";
+import { LoginPage } from "../PageObjects_ts/LoginPage";
+import { DashboardPage } from "../PageObjects_ts/DashBoardPage";
+import { AddToCart } from "../PageObjects_ts/AddToCart";
+import { ConfirmOrder } from "../PageObjects_ts/ConfirmOrder";
 import {Page} from '@playwright/test';
 
 
@@ -54,8 +54,6 @@ import {Page} from '@playwright/test';
 
 
 // //await page.pause();
-
-
 
 
 // }

@@ -47,8 +47,7 @@ test('VisualScreenshotValidations', async ({ page }) => {
 
     await page.goto("https://www.indiapost.gov.in/");
     expect(await page.screenshot()).toMatchSnapshot('Landing.png');
-
-
+    await page.keyboard.press("Tab");
 
 }
 )

@@ -14,7 +14,6 @@ class ConfirmOrder{
         this.finalorderconfirmation = page.locator(".col-text");
     }
  
- 
     async ViewOrderconfirmation(expect,username)
     {
  
